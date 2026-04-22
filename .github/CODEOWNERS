@@ -1,0 +1,13 @@
+# Default owners for everything in the repo.
+# Replace with your GitHub handle or team once the repo has an owner.
+*                     @e-brokenc0de
+
+# Tooling / infra
+/.github/             @e-brokenc0de
+/eslint.config.js     @e-brokenc0de
+/tsconfig*.json       @e-brokenc0de
+/package.json         @e-brokenc0de
+
+# Security-sensitive areas
+/SECURITY.md          @e-brokenc0de
+/src/http/            @e-brokenc0de

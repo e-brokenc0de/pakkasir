@@ -1,0 +1,88 @@
+{
+  "name": "pakkasir",
+  "version": "0.0.0-development",
+  "description": "Fully-typed TypeScript SDK for the Pakasir payment gateway.",
+  "license": "MIT",
+  "author": "pakkasir contributors",
+  "homepage": "https://github.com/e-brokenc0de/pakkasir#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/e-brokenc0de/pakkasir.git"
+  },
+  "bugs": {
+    "url": "https://github.com/e-brokenc0de/pakkasir/issues"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "packageManager": "pnpm@10.12.1",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "clean": "rm -rf dist coverage",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "example": "tsx examples/usage.ts",
+    "prepare": "husky || true",
+    "prepublishOnly": "pnpm clean && pnpm lint && pnpm typecheck && pnpm test && pnpm build"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@commitlint/types": "^19.0.3",
+    "@eslint/js": "^9.10.0",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^13.0.0",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^10.3.0",
+    "@semantic-release/npm": "^12.0.1",
+    "@semantic-release/release-notes-generator": "^14.0.0",
+    "@types/node": "^20.11.0",
+    "@vitest/coverage-v8": "^1.6.1",
+    "conventional-changelog-conventionalcommits": "^7.0.2",
+    "eslint": "^9.10.0",
+    "eslint-config-prettier": "^9.1.0",
+    "husky": "^9.1.5",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.3.3",
+    "semantic-release": "^24.1.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.4.0",
+    "typescript-eslint": "^8.6.0",
+    "vitest": "^1.6.1"
+  },
+  "keywords": [
+    "pakasir",
+    "payment",
+    "qris",
+    "virtual-account",
+    "indonesia",
+    "sdk",
+    "typescript"
+  ]
+}
