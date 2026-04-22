@@ -1,6 +1,6 @@
 {
   "name": "pakkasir",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "description": "Fully-typed TypeScript SDK for the Pakasir payment gateway.",
   "license": "MIT",
   "author": "pakkasir contributors",
